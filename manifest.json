@@ -8,10 +8,6 @@
     "declarativeNetRequest"
   ],
 
-  "host_permissions": [
-    "https://www.linkedin.com/*"
-  ],
-
   "declarative_net_request": {
     "rule_resources": [
       {
