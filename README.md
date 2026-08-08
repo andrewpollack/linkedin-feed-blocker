@@ -2,6 +2,11 @@
 
 A minimal Chrome extension that disables LinkedIn's home feed while keeping the rest of LinkedIn usable.
 
+## Install
+
+**Chrome Web Store:** Currently pending review. The listing will be available shortly [here](https://chromewebstore.google.com/detail/likdkcmiigfdfpkkecbcephijdfbegcf).
+
+
 ## What it does
 
 * Hides the entire main feed on `/feed`
@@ -27,7 +32,7 @@ After having "experienced" the Before image below, I decided to do something abo
   </tr>
 </table>
 
-## Install
+## Manual install
 
 1. Download or clone this repository somewhere permanent on your computer.
 
