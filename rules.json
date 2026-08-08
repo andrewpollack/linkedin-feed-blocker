@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "|https://www.linkedin.com/flagship-web/rsc-action/actions/pagination?*sduiid=com.linkedin.sdui.pagers.feed.mainFeed*",
+      "requestMethods": ["post"],
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "regexFilter": "^https://www\\.linkedin\\.com/voyager/api/graphql\\?.*queryId=voyagerFeedDashMainFeed\\..*",
+      "requestMethods": ["get"],
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  }
+]

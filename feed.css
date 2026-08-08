@@ -1,0 +1,4 @@
+/* Remove the entire LinkedIn home feed, including the post composer. */
+[data-testid="mainFeed"] {
+  display: none !important;
+}
