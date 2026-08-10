@@ -1,4 +1,9 @@
-/* Remove the entire LinkedIn home feed, including the post composer. */
-[data-testid="mainFeed"] {
+/* Hide every feed section by default so DOM changes fail closed. */
+[data-testid="mainFeed"] > * {
   display: none !important;
+}
+
+/* LinkedIn's composer wrapper currently uses display: contents. */
+[data-testid="mainFeed"] > :has([aria-label="Start a post"]) {
+  display: contents !important;
 }
