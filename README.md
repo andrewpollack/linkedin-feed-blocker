@@ -1,6 +1,6 @@
 # LinkedIn Feed Blocker
 
-A minimal Chrome extension that disables LinkedIn's home feed while keeping the rest of LinkedIn usable.
+A minimal Chrome extension that hides LinkedIn's home-feed posts while keeping the post composer and the rest of LinkedIn usable.
 
 ## Install
 
@@ -9,7 +9,7 @@ A minimal Chrome extension that disables LinkedIn's home feed while keeping the 
 
 ## What it does
 
-* Hides the entire main feed on `/feed`
+* Hides feed posts on `/feed` while keeping the post composer available
 * Blocks infinite-scroll feed pagination
 * Leaves profiles, jobs, search, messaging, notifications, and other LinkedIn features alone
 
@@ -28,7 +28,7 @@ After having "experienced" the Before image below, I decided to do something abo
   </tr>
   <tr>
     <td><img src="assets/before.png" alt="Before: LinkedIn home page showing the full social feed, including a large post about a recruiter that 'came' on someone's profile. Yes, as-in _that_ 'came'."></td>
-    <td><img src="assets/after.png" alt="After: LinkedIn home page with no posting feed."></td>
+    <td><img src="assets/after.png" alt="After: LinkedIn home page with the post composer visible and feed posts hidden."></td>
   </tr>
 </table>
 
@@ -68,13 +68,19 @@ After changing `manifest.json`, `rules.json`, or `feed.css`:
 
 #### `feed.css`
 
-Hides LinkedIn's main feed, including the post composer:
+Hides every section in LinkedIn's main-feed container, then restores only the section containing the post composer:
 
 ```css
-[data-testid="mainFeed"] {
+[data-testid="mainFeed"] > * {
   display: none !important;
 }
+
+[data-testid="mainFeed"] > :has([aria-label="Start a post"]) {
+  display: contents !important;
+}
 ```
+
+This selector intentionally fails closed: if LinkedIn changes the composer markup, the composer stays hidden rather than allowing feed posts through. It requires Chrome 105 or newer.
 
 #### `rules.json`
 

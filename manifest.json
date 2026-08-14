@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
+  "minimum_chrome_version": "105",
   "name": "LinkedIn Feed Blocker",
-  "version": "1.1.0",
-  "description": "Disables LinkedIn's main feed while keeping the rest of LinkedIn usable.",
+  "version": "1.2.0",
+  "description": "Hides LinkedIn's home feed while keeping the post composer and the rest of LinkedIn usable.",
 
   "permissions": [
     "declarativeNetRequest"
