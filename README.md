@@ -4,8 +4,8 @@ A minimal Chrome extension that disables LinkedIn's home feed while keeping the 
 
 ## Install
 
-**Chrome Web Store:** Currently pending review. The listing will be available shortly [here](https://chromewebstore.google.com/detail/likdkcmiigfdfpkkecbcephijdfbegcf). In the meantime, follow the [manual installation instructions below](#manual-install).
-
+* **Chrome Web Store:** https://chromewebstore.google.com/detail/likdkcmiigfdfpkkecbcephijdfbegcf
+* **[Manual install](#manual-install)**: load the source directly, e.g. for development
 
 ## What it does
 
